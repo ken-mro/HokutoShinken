@@ -45,7 +45,8 @@ namespace HokutoShinken
         {
             if (key == Keys.Enter)
             {
-                _end.PlaySync();
+
+                _end.Play();
                 return;
             }
 
