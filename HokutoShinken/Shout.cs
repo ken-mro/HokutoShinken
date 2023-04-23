@@ -1,4 +1,5 @@
-﻿using System.Media;
+﻿using System;
+using System.Media;
 using System.Windows.Forms;
 
 namespace HokutoShinken
@@ -14,6 +15,8 @@ namespace HokutoShinken
         private SoundPlayer _current;
         private System.Timers.Timer _StopTimer;
         private bool _isShouting = false;
+        private const Int32 LENTH_OF_ATA = 275;
+        private const Int32 LENTH_OF_ACHA = 1102;
 
         public Shout()
         {
@@ -30,7 +33,7 @@ namespace HokutoShinken
             _blast = new SoundPlayer();
             _blast.Stream = Properties.Resources.blast;
 
-            _StopTimer = new System.Timers.Timer(275);
+            _StopTimer = new System.Timers.Timer(LENTH_OF_ATA);
             _StopTimer.Elapsed += OnTimedEvent;
             _StopTimer.AutoReset = false;
         }
@@ -45,17 +48,21 @@ namespace HokutoShinken
         {
             if (key == Keys.Enter)
             {
-
+                _isShouting = true;
                 _end.Play();
+                _StopTimer.Interval = LENTH_OF_ACHA;
+                _StopTimer.Enabled = false;
+                _current = _end;
                 return;
             }
 
-            if (key == Keys.Space || ((int)Keys.A <= (int)key && (int)key <= (int)Keys.Z))
+            if (key == Keys.Space || ((int)Keys.D0 <= (int)key && (int)key <= (int)Keys.Z))
             {
+                _StopTimer.Interval = LENTH_OF_ATA;
                 _StopTimer.Enabled = false;
                 if (_isShouting)
                 {
-                    if (_current != _middle)
+                    if (_current == _start)
                     {
                         _middle.PlayLooping();
                         _current = _middle;
