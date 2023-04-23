@@ -8,6 +8,8 @@ namespace HokutoShinken
         private NotifyIcon notifyIcon;
         KeyboardHook keyboardHook = new KeyboardHook();
         private Shout shout = new Shout();
+        private bool _canUse = true;
+        private ToolStripMenuItem _canUseMenu;
 
         public Form1()
         {
@@ -34,6 +36,11 @@ namespace HokutoShinken
             shoutCatchPhrase.Click += InitialShout_Click;
             contextMenuStrip.Items.Add(shoutCatchPhrase);
 
+            _canUseMenu = new ToolStripMenuItem();
+            _canUseMenu.Text = "Stop";
+            _canUseMenu.Click += CanUse_Clicke;
+            contextMenuStrip.Items.Add(_canUseMenu);
+
             notifyIcon.ContextMenuStrip = contextMenuStrip;
 
             keyboardHook.KeyDownEvent += KeyboardHook_KeyDownEvent;
@@ -45,6 +52,11 @@ namespace HokutoShinken
             notifyIcon.ShowBalloonTip(5000);
         }
 
+        private void CanUse_Clicke(object sendr, EventArgs e)
+        {
+            _canUse = !_canUse;
+            _canUseMenu.Text = _canUse ? "Stop" : "Start";
+        }
         private void ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             keyboardHook.UnHook();
@@ -58,7 +70,8 @@ namespace HokutoShinken
 
         private void KeyboardHook_KeyDownEvent(object sender, KeyEventArgs e)
         {
-            var key = e.KeyCode;
+            if (!_canUse) return;
+                var key = e.KeyCode;
             shout.Shouting(key);
         }
 
