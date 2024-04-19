@@ -15,7 +15,7 @@ namespace HokutoShinken
         private SoundPlayer _current;
         private System.Timers.Timer _StopTimer;
         private bool _isShouting = false;
-        private const Int32 LENTH_OF_ATA = 275;
+        private const Int32 LENTH_OF_ATA = 200;
         private const Int32 LENTH_OF_ACHA = 1102;
 
         public Shout()
