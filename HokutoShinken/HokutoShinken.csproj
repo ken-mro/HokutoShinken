@@ -136,22 +136,10 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\blast.wav" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\ata.wav" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\catchphrase.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\hikou.wav" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\tatatata.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\deathblow.wav" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\acha.wav" />

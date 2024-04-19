@@ -124,18 +124,6 @@
   <data name="ata" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ata.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="blast" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\blast.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="catchphrase" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\catchphrase.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="deathblow" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\deathblow.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="hikou" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\hikou.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="Hokuto" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Hokuto.ico;System.Drawing.Icon, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

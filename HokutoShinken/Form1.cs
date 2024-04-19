@@ -15,7 +15,6 @@ namespace HokutoShinken
         {
             this.ShowInTaskbar = false;
             this.setComponents();
-            shout.InitialShout(); 
         }
 
         private void setComponents()
@@ -30,11 +29,6 @@ namespace HokutoShinken
             closeMenu.Text = "&Decline the inheritance";
             closeMenu.Click += ToolStripMenuItem_Click;
             contextMenuStrip.Items.Add(closeMenu);
-
-            ToolStripMenuItem shoutCatchPhrase = new ToolStripMenuItem();
-            shoutCatchPhrase.Text = "Listen to the catch phrase!";
-            shoutCatchPhrase.Click += InitialShout_Click;
-            contextMenuStrip.Items.Add(shoutCatchPhrase);
 
             _canUseMenu = new ToolStripMenuItem();
             _canUseMenu.Text = "Stop";
@@ -60,11 +54,6 @@ namespace HokutoShinken
         {
             keyboardHook.UnHook();
             Application.Exit();
-        }
-
-        private void InitialShout_Click(object sender, EventArgs e)
-        {
-            shout.InitialShout();
         }
 
         private void KeyboardHook_KeyDownEvent(object sender, KeyEventArgs e)

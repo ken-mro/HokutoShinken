@@ -9,9 +9,7 @@ namespace HokutoShinken
         private SoundPlayer _start;
         private SoundPlayer _middle;
         private SoundPlayer _end;
-        private SoundPlayer _hikou;
-        private SoundPlayer _catchPhrase;
-        private SoundPlayer _blast;
+
         private SoundPlayer _current;
         private System.Timers.Timer _StopTimer;
         private bool _isShouting = false;
@@ -26,24 +24,12 @@ namespace HokutoShinken
             _middle.Stream = Properties.Resources.tatatata;
             _end = new SoundPlayer();
             _end.Stream = Properties.Resources.acha;
-            _hikou = new SoundPlayer();
-            _hikou.Stream = Properties.Resources.hikou;
-            _catchPhrase = new SoundPlayer();
-            _catchPhrase.Stream = Properties.Resources.catchphrase;
-            _blast = new SoundPlayer();
-            _blast.Stream = Properties.Resources.blast;
 
             _StopTimer = new System.Timers.Timer(LENTH_OF_ATA);
             _StopTimer.Elapsed += OnTimedEvent;
             _StopTimer.AutoReset = false;
         }
 
-        public void InitialShout()
-        {
-            _catchPhrase.PlaySync();
-            _hikou.PlaySync();
-            _blast.PlaySync();
-        }
         public void Shouting(Keys key)
         {
             if (key == Keys.Enter)
