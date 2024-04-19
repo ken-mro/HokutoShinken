@@ -44,7 +44,6 @@ namespace HokutoShinken
             notifyIcon.ContextMenuStrip = contextMenuStrip;
 
             keyboardHook.KeyDownEvent += KeyboardHook_KeyDownEvent;
-            //keyboardHook.KeyUpEvent += KeyboardHook_KeyUpEvent;
             keyboardHook.Hock();
 
             notifyIcon.BalloonTipTitle = "Now you are the legitimate successor of Hokuto Shinken!";
@@ -75,10 +74,6 @@ namespace HokutoShinken
             shout.Shouting(key);
         }
 
-        //private void KeyboardHook_KeyUpEvent(object sender, KeyEventArgs e)
-        //{
-
-        //}
 
         private void Form1_Load(object sender, EventArgs e)
         {
