@@ -70,11 +70,31 @@ namespace HokutoShinken.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] acha2 {
+            get {
+                object obj = ResourceManager.GetObject("acha2", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream ata {
             get {
                 return ResourceManager.GetStream("ata", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] ata2 {
+            get {
+                object obj = ResourceManager.GetObject("ata2", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         
@@ -94,6 +114,16 @@ namespace HokutoShinken.Properties {
         internal static System.IO.UnmanagedMemoryStream tatatata {
             get {
                 return ResourceManager.GetStream("tatatata", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
+        internal static byte[] tatatata2 {
+            get {
+                object obj = ResourceManager.GetObject("tatatata2", resourceCulture);
+                return ((byte[])(obj));
             }
         }
     }

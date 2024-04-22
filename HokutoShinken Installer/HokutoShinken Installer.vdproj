@@ -3,7 +3,7 @@
 "VSVersion" = "3:800"
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
-"ProjectName" = "8:HokutoShinken Installer"
+"ProjectName" = "8:HokutoShinkenInstaller"
 "LanguageId" = "3:1033"
 "CodePage" = "3:1252"
 "UILanguageId" = "3:1033"
@@ -21,26 +21,26 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_5296BD4E446E4FC2BF8C083BF187B156"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_611A43EF9B6445F2A4749563E1FFE7CA"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3151DD376ACF59A22C885A1071737CF6"
+        "MsmKey" = "8:_679B602279144932A0FF3905BC4859FD"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_611A43EF9B6445F2A4749563E1FFE7CA"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_3151DD376ACF59A22C885A1071737CF6"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -61,13 +61,29 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
         "Release"
         {
         "DisplayName" = "8:Release"
         "IsDebugOnly" = "11:FALSE"
         "IsReleaseOnly" = "11:TRUE"
-        "OutputFilename" = "8:Release\\HokutoShinken Installer.msi"
+        "OutputFilename" = "8:Release\\HokutoShinkenInstaller.msi"
         "PackageFilesAs" = "3:2"
         "PackageFileSize" = "3:-2147483648"
         "CabType" = "3:1"
@@ -163,7 +179,7 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_5296BD4E446E4FC2BF8C083BF187B156"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_679B602279144932A0FF3905BC4859FD"
             {
             "SourcePath" = "8:..\\HokutoShinken\\Resources\\Hokuto.ico"
             "TargetName" = "8:Hokuto.ico"
@@ -251,7 +267,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:HokutoShinken"
         "ProductCode" = "8:{A41EBB6B-4312-4D17-B4E2-79C2D7391097}"
-        "PackageCode" = "8:{129981EC-4251-4CA3-9FFD-22C9AF8AAAFE}"
+        "PackageCode" = "8:{67F0377F-BDD6-4CE1-AF13-EFD356EDFBE9}"
         "UpgradeCode" = "8:{B830541C-79FE-4705-A300-05330C9FEA76}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -382,7 +398,7 @@
             "Target" = "8:_611A43EF9B6445F2A4749563E1FFE7CA"
             "Folder" = "8:_89D7AAA7C12E4ABCB12432292CFC7F00"
             "WorkingFolder" = "8:_1391DF1D51834366B9D92CE0B2B68456"
-            "Icon" = "8:_5296BD4E446E4FC2BF8C083BF187B156"
+            "Icon" = "8:_679B602279144932A0FF3905BC4859FD"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_4DC9328DB0374661AA4BDB7A276E9402"
@@ -396,7 +412,7 @@
             "Target" = "8:_611A43EF9B6445F2A4749563E1FFE7CA"
             "Folder" = "8:_85D313DF8E8D42F18452DC172334F5AB"
             "WorkingFolder" = "8:_1391DF1D51834366B9D92CE0B2B68456"
-            "Icon" = "8:_5296BD4E446E4FC2BF8C083BF187B156"
+            "Icon" = "8:_679B602279144932A0FF3905BC4859FD"
             "Feature" = "8:"
             }
         }
