@@ -8,7 +8,7 @@ namespace HokutoShinken
         private NotifyIcon notifyIcon;
         KeyboardHook keyboardHook = new KeyboardHook();
         private Shout shout = new Shout();
-        private bool _canUse = true;
+        private bool _canUse = false;
         private ToolStripMenuItem _canUseMenu;
 
         public Form1()
@@ -31,7 +31,7 @@ namespace HokutoShinken
             contextMenuStrip.Items.Add(closeMenu);
 
             _canUseMenu = new ToolStripMenuItem();
-            _canUseMenu.Text = "Stop";
+            _canUseMenu.Text = "Start";
             _canUseMenu.Click += CanUse_Click;
             contextMenuStrip.Items.Add(_canUseMenu);
 
