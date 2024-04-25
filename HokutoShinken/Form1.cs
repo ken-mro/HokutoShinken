@@ -25,15 +25,20 @@ namespace HokutoShinken
             notifyIcon.Text = "HokutoShinken";
 
             ContextMenuStrip contextMenuStrip = new ContextMenuStrip();
-            ToolStripMenuItem closeMenu = new ToolStripMenuItem();
-            closeMenu.Text = "&Decline the inheritance";
-            closeMenu.Click += ToolStripMenuItem_Click;
-            contextMenuStrip.Items.Add(closeMenu);
+            ToolStripMenuItem _helpMenu = new ToolStripMenuItem();
+            _helpMenu.Text = "Help";
+            _helpMenu.Click += _helpMenu_Click;
+            contextMenuStrip.Items.Add(_helpMenu);
 
             _canUseMenu = new ToolStripMenuItem();
             _canUseMenu.Text = "Start";
             _canUseMenu.Click += CanUse_Click;
             contextMenuStrip.Items.Add(_canUseMenu);
+
+            ToolStripMenuItem closeMenu = new ToolStripMenuItem();
+            closeMenu.Text = "Exit";
+            closeMenu.Click += ToolStripMenuItem_Click;
+            contextMenuStrip.Items.Add(closeMenu);
 
             notifyIcon.ContextMenuStrip = contextMenuStrip;
 
@@ -43,6 +48,10 @@ namespace HokutoShinken
             notifyIcon.BalloonTipTitle = "Now you are the legitimate successor of Hokuto Shinken!";
             notifyIcon.BalloonTipText = "Decline the inheritance? Right click on the icon in the Task Tray.";
             notifyIcon.ShowBalloonTip(5000);
+
+        private void _helpMenu_Click(object sender, EventArgs e)
+        {
+            notifyIcon.ShowBalloonTip(int.MaxValue);
         }
 
         private void CanUse_Click(object sender, EventArgs e)
