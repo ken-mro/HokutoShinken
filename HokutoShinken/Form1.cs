@@ -45,9 +45,13 @@ namespace HokutoShinken
             keyboardHook.KeyDownEvent += KeyboardHook_KeyDownEvent;
             keyboardHook.Hock();
 
-            notifyIcon.BalloonTipTitle = "Now you are the legitimate successor of Hokuto Shinken!";
-            notifyIcon.BalloonTipText = "Decline the inheritance? Right click on the icon in the Task Tray.";
-            notifyIcon.ShowBalloonTip(5000);
+            notifyIcon.BalloonTipTitle = "The app is located in the task tray.";
+
+            var message = "To use it, right-click the app icon and select ‘Start’.\n"
+                           + "Please ensure to check the volume before clicking ‘Start’.";
+            notifyIcon.BalloonTipText = message;
+            notifyIcon.ShowBalloonTip(int.MaxValue);
+        }
 
         private void _helpMenu_Click(object sender, EventArgs e)
         {
