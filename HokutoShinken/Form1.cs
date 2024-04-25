@@ -8,7 +8,7 @@ namespace HokutoShinken
         private NotifyIcon notifyIcon;
         KeyboardHook keyboardHook = new KeyboardHook();
         private Shout shout = new Shout();
-        private bool _canUse = true;
+        private bool _canUse = false;
         private ToolStripMenuItem _canUseMenu;
 
         public Form1()
@@ -25,29 +25,43 @@ namespace HokutoShinken
             notifyIcon.Text = "HokutoShinken";
 
             ContextMenuStrip contextMenuStrip = new ContextMenuStrip();
-            ToolStripMenuItem closeMenu = new ToolStripMenuItem();
-            closeMenu.Text = "&Decline the inheritance";
-            closeMenu.Click += ToolStripMenuItem_Click;
-            contextMenuStrip.Items.Add(closeMenu);
+            ToolStripMenuItem _helpMenu = new ToolStripMenuItem();
+            _helpMenu.Text = "Help";
+            _helpMenu.Click += _helpMenu_Click;
+            contextMenuStrip.Items.Add(_helpMenu);
 
             _canUseMenu = new ToolStripMenuItem();
-            _canUseMenu.Text = "Stop";
-            _canUseMenu.Click += CanUse_Clicke;
+            _canUseMenu.Text = "Start";
+            _canUseMenu.Click += CanUse_Click;
             contextMenuStrip.Items.Add(_canUseMenu);
+
+            ToolStripMenuItem closeMenu = new ToolStripMenuItem();
+            closeMenu.Text = "Exit";
+            closeMenu.Click += ToolStripMenuItem_Click;
+            contextMenuStrip.Items.Add(closeMenu);
 
             notifyIcon.ContextMenuStrip = contextMenuStrip;
 
             keyboardHook.KeyDownEvent += KeyboardHook_KeyDownEvent;
             keyboardHook.Hock();
 
-            notifyIcon.BalloonTipTitle = "Now you are the legitimate successor of Hokuto Shinken!";
-            notifyIcon.BalloonTipText = "Decline the inheritance? Right click on the icon in the Task Tray.";
-            notifyIcon.ShowBalloonTip(5000);
+            notifyIcon.BalloonTipTitle = "The app is located in the task tray.";
+
+            var message = "To use it, right-click the app icon and select ‘Start’.\n"
+                           + "Please ensure to check the volume before clicking ‘Start’.";
+            notifyIcon.BalloonTipText = message;
+            notifyIcon.ShowBalloonTip(int.MaxValue);
         }
 
-        private void CanUse_Clicke(object sendr, EventArgs e)
+        private void _helpMenu_Click(object sender, EventArgs e)
+        {
+            notifyIcon.ShowBalloonTip(int.MaxValue);
+        }
+
+        private void CanUse_Click(object sender, EventArgs e)
         {
             _canUse = !_canUse;
+            if (_canUse) shout.Ata();
             _canUseMenu.Text = _canUse ? "Stop" : "Start";
         }
         private void ToolStripMenuItem_Click(object sender, EventArgs e)
