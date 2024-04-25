@@ -32,7 +32,7 @@ namespace HokutoShinken
 
             _canUseMenu = new ToolStripMenuItem();
             _canUseMenu.Text = "Stop";
-            _canUseMenu.Click += CanUse_Clicke;
+            _canUseMenu.Click += CanUse_Click;
             contextMenuStrip.Items.Add(_canUseMenu);
 
             notifyIcon.ContextMenuStrip = contextMenuStrip;
@@ -45,7 +45,7 @@ namespace HokutoShinken
             notifyIcon.ShowBalloonTip(5000);
         }
 
-        private void CanUse_Clicke(object sendr, EventArgs e)
+        private void CanUse_Click(object sender, EventArgs e)
         {
             _canUse = !_canUse;
             _canUseMenu.Text = _canUse ? "Stop" : "Start";
