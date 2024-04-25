@@ -29,6 +29,10 @@ namespace HokutoShinken
             _StopTimer.Elapsed += OnTimedEvent;
             _StopTimer.AutoReset = false;
         }
+        public void Ata()
+        {
+            _start.Play();
+        }
 
         public void Shouting(Keys key)
         {

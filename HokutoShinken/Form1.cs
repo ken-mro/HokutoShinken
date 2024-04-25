@@ -61,6 +61,7 @@ namespace HokutoShinken
         private void CanUse_Click(object sender, EventArgs e)
         {
             _canUse = !_canUse;
+            if (_canUse) shout.Ata();
             _canUseMenu.Text = _canUse ? "Stop" : "Start";
         }
         private void ToolStripMenuItem_Click(object sender, EventArgs e)
